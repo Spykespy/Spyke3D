@@ -13,27 +13,70 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\WindowSystem">
+      <UniqueIdentifier>{9cf3a3b7-90ef-4e2f-92f2-2ac140dd2d98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WindowSystem">
+      <UniqueIdentifier>{afe375dc-6f6f-478a-9bfd-f6f2fb96d513}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Source Files\WindowSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Source Files\WindowSystem</Filter>
     </ClCompile>
     <ClCompile Include="SpykeException.cpp">
+      <Filter>Source Files\WindowSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\WindowSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpykeTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SpykeWin.h">
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Header Files\WindowSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>Header Files\WindowSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SpykeWin.h">
+      <Filter>Header Files\WindowSystem</Filter>
     </ClInclude>
     <ClInclude Include="SpykeExceptions.h">
+      <Filter>Header Files\WindowSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\WindowSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SpykeTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Spyke3D.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\s3d.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

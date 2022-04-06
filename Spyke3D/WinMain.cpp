@@ -1,4 +1,4 @@
-#include "Window.h"
+#include "App.h"
 
 
 int CALLBACK WinMain(
@@ -7,23 +7,21 @@ int CALLBACK WinMain(
 	LPSTR     lpCmdLine,
 	int       nCmdShow)
 {
-	Window wnd(1920, 1080, "Spyke3D");
-
-	MSG msg;
-	BOOL gResult;
-	while ((gResult = GetMessage(&msg, nullptr, 0, 0)) > 0)
-	{
-		// TranslateMessage will post auxilliary WM_CHAR messages from key msgs
-		TranslateMessage(&msg);
-		DispatchMessage(&msg);
+	try {
+		return App{}.Go();
 	}
-
-	// check if GetMessage call itself borked
-	if (gResult == -1)
+	catch (const SpykeException& e)
 	{
-		return -1;
+		MessageBox(nullptr, e.what(), e.GetType(), MB_OK | MB_ICONEXCLAMATION);
 	}
+	catch (const std::exception& e)
+	{
+		MessageBox(nullptr, e.what(), "Standard Exception", MB_OK | MB_ICONEXCLAMATION);
+	}
+	catch (...)
+	{
+		MessageBox(nullptr, "No details available", "Unknown Exception", MB_OK | MB_ICONEXCLAMATION);
+	}
+	return -1;
 
-	// wParam here is the value passed to PostQuitMessage
-	return msg.wParam;
 }
