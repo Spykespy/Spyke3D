@@ -1,6 +1,5 @@
 #include "App.h"
 
-
 int CALLBACK WinMain(
 	HINSTANCE hInstance,
 	HINSTANCE hPrevInstance,
@@ -25,3 +24,4 @@ int CALLBACK WinMain(
 	return -1;
 
 }
+

@@ -10,6 +10,7 @@ public:
 	int Go();
 private:
 	void DoFrame();
+	int frames;
 private:
 	Window wnd;
 	SpykeTimer timer;

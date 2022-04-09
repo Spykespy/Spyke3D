@@ -19,6 +19,12 @@
     <Filter Include="Source Files\WindowSystem">
       <UniqueIdentifier>{afe375dc-6f6f-478a-9bfd-f6f2fb96d513}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ErrorHandling">
+      <UniqueIdentifier>{1f75043c-b84f-44a1-bd8d-bd21713f0564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shaders">
+      <UniqueIdentifier>{0ec7e13e-14a0-4ac3-98cf-f3c1d6038c4a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -30,17 +36,26 @@
     <ClCompile Include="Mouse.cpp">
       <Filter>Source Files\WindowSystem</Filter>
     </ClCompile>
-    <ClCompile Include="SpykeException.cpp">
-      <Filter>Source Files\WindowSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files\WindowSystem</Filter>
-    </ClCompile>
     <ClCompile Include="App.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SpykeTimer.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DxgiInfoManager.cpp">
+      <Filter>Source Files\ErrorHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="dxerr.cpp">
+      <Filter>Source Files\ErrorHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpykeException.cpp">
+      <Filter>Source Files\ErrorHandling</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +83,15 @@
     <ClInclude Include="SpykeTimer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dxerr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DxgiInfoManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Spyke3D.rc">
@@ -78,5 +102,24 @@
     <Image Include="..\..\..\..\Desktop\s3d.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXGetErrorDescription.inl">
+      <Filter>Source Files\ErrorHandling</Filter>
+    </None>
+    <None Include="DXGetErrorString.inl">
+      <Filter>Source Files\ErrorHandling</Filter>
+    </None>
+    <None Include="DXTrace.inl">
+      <Filter>Source Files\ErrorHandling</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VertexShader.hlsl">
+      <Filter>Header Files\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="PixelShader.hlsl">
+      <Filter>Header Files\Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

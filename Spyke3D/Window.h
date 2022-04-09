@@ -4,6 +4,8 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include <optional>
+#include "Graphics.h"
+#include <memory>
 
 class Window
 {
@@ -44,6 +46,7 @@ public:
 	void SetTitle(const std::string& title);
 	static std::optional<int> ProcessMessages();
 	Window& operator=(const Window&) = delete;
+	Graphics& Gfx(); 
 private:
 	static LRESULT CALLBACK HandleMsgSetup(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept;
 	static LRESULT CALLBACK HandleMsgThunk(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) noexcept;
@@ -55,8 +58,10 @@ private:
 	int width;
 	int height;
 	HWND hWnd;
+	std::unique_ptr<Graphics> pGfx;
 };
 
 // error exception helper macro
 #define CHWND_EXCEPT( hr ) Window::Exception( __LINE__,__FILE__,hr )
 #define CHWND_LAST_EXCEPT() Window::Exception( __LINE__,__FILE__,GetLastError() )
+#define CHWND_NOGFX_EXCEPT() Window::NoGfxException( __LINE__,__FILE__ )
